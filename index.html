@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbai Rides - Premium Car Booking & Mumbai Darshan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">M</div>
+                    <span class="logo-text">Mumbai Rides</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9867050052</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Explore Mumbai with <span class="highlight">Comfort</span>
+                </h1>
+                <p class="hero-description">
+                    Book premium cars for Mumbai darshan, airport transfers, and city rides. Experience the best of Mumbai with our professional drivers and comfortable vehicles.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToServices()">
+                        View Our Services
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="scrollToContact()">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Mumbai Rides?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Premium Service</h3>
+                    <p>Professional drivers, clean cars, and excellent customer service</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Available</h3>
+                    <p>Round the clock service for all your transportation needs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe & Reliable</h3>
+                    <p>Verified drivers, well-maintained vehicles, and insurance coverage</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer support team available anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services & Pricing</h2>
+            
+            <!-- Mumbai Darshan -->
+            <div class="service-category">
+                <h3 class="category-title">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Mumbai Darshan Tours
+                </h3>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Half Day Tour (4 Hours)</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>Gateway of India</li>
+                            <li>Marine Drive</li>
+                            <li>Juhu Beach</li>
+                            <li>Professional Guide</li>
+                            <li>AC Vehicle</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('Mumbai Darshan - Half Day (4 Hours)', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+
+                    <div class="service-card featured">
+                        <div class="service-badge">Most Popular</div>
+                        <div class="service-header">
+                            <h4>Full Day Tour (8 Hours)</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>Gateway of India</li>
+                            <li>Marine Drive</li>
+                            <li>Elephanta Caves</li>
+                            <li>Juhu Beach</li>
+                            <li>Siddhivinayak Temple</li>
+                            <li>Haji Ali Dargah</li>
+                            <li>Professional Guide</li>
+                            <li>AC Vehicle</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('Mumbai Darshan - Full Day (8 Hours)', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Extended Tour (12 Hours)</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>All Major Attractions</li>
+                            <li>Lunch Included</li>
+                            <li>Professional Guide</li>
+                            <li>Premium AC Vehicle</li>
+                            <li>Flexible Route</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('Mumbai Darshan - Extended (12 Hours)', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Taxi Services -->
+            <div class="service-category">
+                <h3 class="category-title">
+                    <i class="fas fa-taxi"></i>
+                    Taxi Services
+                </h3>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Airport Transfers</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>Mumbai Airport Pickup/Drop</li>
+                            <li>Flight Tracking</li>
+                            <li>Meet & Greet</li>
+                            <li>AC Vehicle</li>
+                            <li>Luggage Assistance</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('Airport Transfer', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>City Taxi</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>Point to Point Travel</li>
+                            <li>Office Commute</li>
+                            <li>Shopping Trips</li>
+                            <li>AC Vehicle</li>
+                            <li>Professional Driver</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('City Taxi', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Railway Station Pickup</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>All Major Stations</li>
+                            <li>Train Tracking</li>
+                            <li>Meet & Greet</li>
+                            <li>AC Vehicle</li>
+                            <li>Luggage Assistance</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('Railway Station Pickup', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Fleet -->
+            <div class="service-category">
+                <h3 class="category-title">
+                    <i class="fas fa-car"></i>
+                    Our Car Fleet
+                </h3>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Maruti Swift Dzire</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>4 Seater Sedan</li>
+                            <li>AC & Music System</li>
+                            <li>GPS Navigation</li>
+                            <li>Professional Driver</li>
+                            <li>Clean & Comfortable</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('Maruti Swift Dzire', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+
+                    <div class="service-card featured">
+                        <div class="service-badge">Popular Choice</div>
+                        <div class="service-header">
+                            <h4>Toyota Innova</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>7 Seater SUV</li>
+                            <li>Spacious Interior</li>
+                            <li>AC & Music System</li>
+                            <li>GPS Navigation</li>
+                            <li>Professional Driver</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('Toyota Innova', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Honda City</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>4 Seater Premium Sedan</li>
+                            <li>Luxury Interior</li>
+                            <li>AC & Music System</li>
+                            <li>GPS Navigation</li>
+                            <li>Professional Driver</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('Honda City', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h4>Mahindra Scorpio</h4>
+                        </div>
+                        <ul class="service-features">
+                            <li>7 Seater SUV</li>
+                            <li>Powerful Engine</li>
+                            <li>AC & Music System</li>
+                            <li>GPS Navigation</li>
+                            <li>Professional Driver</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="bookViaWhatsApp('Mahindra Scorpio', '')">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourist Spots -->
+    <section class="tourist-spots">
+        <div class="container">
+            <h2 class="section-title">Popular Mumbai Destinations</h2>
+            <div class="spots-grid">
+                <div class="spot-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Gateway of India</p>
+                </div>
+                <div class="spot-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Marine Drive</p>
+                </div>
+                <div class="spot-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Elephanta Caves</p>
+                </div>
+                <div class="spot-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Juhu Beach</p>
+                </div>
+                <div class="spot-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Siddhivinayak Temple</p>
+                </div>
+                <div class="spot-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Haji Ali Dargah</p>
+                </div>
+                <div class="spot-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Chhatrapati Shivaji Terminus</p>
+                </div>
+                <div class="spot-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Bandra Worli Sea Link</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9867050052</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>cm505551@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Mumbai, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Service Hours</h4>
+                            <p>24/7 Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-actions">
+                    <button class="btn btn-primary btn-large" onclick="bookViaWhatsApp('General Inquiry', '')">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="callUs()">
+                        <i class="fas fa-phone"></i> Call Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">M</div>
+                        <span class="logo-text">Mumbai Rides</span>
+                    </div>
+                    <p>Your trusted partner for premium car booking and Mumbai darshan services.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +91 9867050052</p>
+                        <p><i class="fas fa-envelope"></i> cm505551@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li>Mumbai Darshan Tours</li>
+                        <li>Airport Transfers</li>
+                        <li>City Taxi Service</li>
+                        <li>Railway Station Pickup</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Popular Destinations</h4>
+                    <ul class="footer-links">
+                        <li>Gateway of India</li>
+                        <li>Marine Drive</li>
+                        <li>Elephanta Caves</li>
+                        <li>Juhu Beach</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Contact</h4>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" onclick="bookViaWhatsApp('General Inquiry', '')">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link" onclick="callUs()">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mumbai Rides. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
